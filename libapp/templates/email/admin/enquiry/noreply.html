@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name','')|title }},</p>
+				<p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    The user {{ message_content.get('user_name','') }} has not reverted to the Space :<a href="{{message_content.get('link_space', '')}}" target="_blank" > {{ message_content.get('space_title','') }}</a>
+                    Enquiry ID:&nbsp;<b> {{ message_content.get('enq_id','') }} </b>&nbsp; for over 48 hours.<br />
+                    Kindly follow up.
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

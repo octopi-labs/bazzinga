@@ -1,0 +1,20 @@
+Dear {{ email_content.get('name', '')|title }},
+
+I'm Neelay Jain, Co-founder of My Cute Office. We, at My Cute Office, believe that new businesses should save time and money involved in getting an office and rather invest that in growing their business. We do this by helping companies share spare office spaces with each other. These can be booked quickly on short-term basis.
+
+Over the last 7 months, we received requests for over 6000 desks and facilities while listing 2400 such spaces on our portal.
+Our community is growing daily to include Professionals, Startups, SMEs and Freelancers.
+
+Benefits of MyCuteOffice.com
+
+    1. Safe & Secure transactions through MyCuteOffice.com
+
+    2. Payment management by MyCuteOffice.com
+
+    3. A technology driven platform to market your space
+
+    4. Faster fill rate
+
+To list your space on MyCuteOffice.com, please fill the form below.
+
+{% include "footer.html" ignore missing %}

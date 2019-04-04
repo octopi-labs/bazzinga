@@ -1,0 +1,11 @@
+Dear {{ message_content.get('name', '')|title }},
+
+You have generated enquiry for the Space in ({{ message_content.get('location', '') }})
+
+space : {{ message_content.get('link_space', '') }},
+
+reply : {{ message_content.get('link_reply', '') }}
+
+Our executive will shortly get in touch and share the details of the space with you.
+
+{% include "footer.html" ignore missing %}

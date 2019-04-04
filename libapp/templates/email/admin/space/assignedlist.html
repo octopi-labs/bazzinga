@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%; padding: 15px;">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name','')| title }},</p>
+                <p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    Following Spaces are assigned to you.
+                    </b>
+				</p>
+                <table width="100%" style="height: 100%; border: 1px solid #000; padding: 2px;">
+                    <tr>
+                        <th>Space ID</th>
+                        <th>Name</th>
+                        <th>Landmark</th>
+                        <th>Created</th>
+                        <th>Action</th>
+                    </tr>
+                    {% set space_list = message_content.get('spaces', NONE) %}
+                    {% set link_reply = message_content.get('link_reply', '') %}
+                    {% for space in space_list %}
+                        {% set link = link_reply | replace('space_id', space.get('id')) %}
+                        <tr>
+                            <td>
+                                <a href="{{ link }}" target="_blank">
+                                    #MCOSP{{ space.get('id') }}
+                                </a>
+                            </td>
+                            <td>{{ space.get('fullname', '') | title }}</td>
+                            <td>{{ space.get('landmark', '') }}</td>
+                            <td>{{ space.get('created', '') }}</td>
+                            <td>
+                                <a href="{{ link }}" target="_blank" style="display: inline-block; background-color: black; color: white; text-decoration: none; padding: 5px 25px; border: 2px solid gray;">
+                                    #MCOSP{{ message_content.get('space_id','') }}
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    <tr></tr>
+                </table>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

@@ -1,0 +1,10 @@
+
+Dear {{ message_content.get('name','')|title }},
+
+Thanks for signing up on My Cute Office. Please take a minute and confirm your MCO account.
+
+Confirm account
+
+If you haven’t signed up with MCO, you can disregard this message.
+
+{% include "footer.html" ignore missing %}

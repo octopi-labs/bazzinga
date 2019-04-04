@@ -1,0 +1,3 @@
+Status of requirement is {{ message_content.get('status', '')}}
+
+

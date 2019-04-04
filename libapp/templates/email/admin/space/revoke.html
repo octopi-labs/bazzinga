@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name','')|title }},</p>
+				<p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    The Space ID:&nbsp;<b>{{ message_content.get('space_id','') }}</b>&nbsp;has been revoked.
+				</p>
+                <p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                   <b><u>Reason for Revoking:</u></b><br />
+                    {{ message_content.get('msg','')|safe }}
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

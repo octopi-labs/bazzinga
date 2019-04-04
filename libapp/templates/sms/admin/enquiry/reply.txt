@@ -1,0 +1,11 @@
+
+Hi {{ message_content.get('name', '')|title }}
+
+A reply to {{ message_content.get('title', '')}} enquiry has been posted as follows:
+
+{{ message_content.get('name', '') }}	{{ message_content.get('msg', '') }}
+
+Reply
+
+{% include "footer.html" ignore missing %}
+

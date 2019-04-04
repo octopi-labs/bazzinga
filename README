@@ -1,0 +1,7 @@
+Bazzinga is an open source library for all sorts of push notifications for iOS, Android, Blackberry, Windows, etc. The current target OSs are iPhone, Android, Windows and Blackberry in the same order. The library also provides a way to incorporate any new Push notification service with few coding integration. 
+
+The library will act as a single provider for all sorts of push notications. 
+
+Development Environment: python, flask framework, Twitter Bootstrap.
+
+Like: https://cloudrail.com

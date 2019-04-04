@@ -1,0 +1,4 @@
+Dear {{ message_content.get('name','')|title }},
+Thank you for being with us and providing your office space  {{message_content.get('link_space', '')}}.
+On your continued support for us we would like to know whether your space is still available for renting out to the people.
+If your space is available please click here  {{message_content.get('link_reply_agree', '')}}

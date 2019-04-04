@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name' , '')|title }},</p>
+
+				<p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				    This is just a gentle reminder for <b>{{ message_content.get('ss_name' , '')|title }}</b> booking on <b>{{ message_content.get('date' , '')|title }}.</b> Please be available during the check-in, verify identity of the visitor and ensure that all the facilities and amenities as mentioned in the booking summary are made available.
+				</p>
+
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				    Kindly find attached the booking summary for your reference.
+				</p>
+
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				    In case of any cancellation, we will inform you atleast 24 hours prior to the check-in date.
+				</p>
+
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				    You can reach us on +91-7738888577 or write to us on hello@mycuteoffice.com if you face any issues or need any clarifications.
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

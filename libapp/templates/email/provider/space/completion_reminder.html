@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Hi {{ message_content.get('name', '')|title }},</p>
+
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">I noticed you have not been able to complete your space listing on My Cute Office. Just checking if you want to have a call to discuss any issues you may be facing? I am available on call on +91-7738888577. </p>
+
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				    Alternatively, you can complete the listing by following these 3 easy steps:
+                    <ol>
+                    <li>Edit your listing by <a href="{{ message_content.get('link_edit_listing', '') }}" target="_blank" style="text-decoration: none;">clicking here</a></li>
+                    <li>Enter the required details including the images</li>
+                    <li>Accept our <a href="{{ message_content.get('link_terms', '') }}" target="_blank" style="text-decoration: none;">terms</a> and <a href="{{ message_content.get('link_pricing', '') }}" target="_blank" style="text-decoration: none;">pricing</a></li>
+                   </ol>
+				</p>
+
+                <p style="font-weight: 600">
+                    Waiting eagerly to share your space details with thousands of space seekers on My Cute Office.
+                </p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

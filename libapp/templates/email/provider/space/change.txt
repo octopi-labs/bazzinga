@@ -1,0 +1,23 @@
+
+Hi {{ message_content.get('name', '')}},
+
+The status of your space has been changed from Published to {{ message_content.get('space_status', '')}}
+because of following reason
+
+{{ message_content.get('admin_message', '')|safe }}
+
+If you wish to publish the space again in the future,
+
+1. Review your listing by clicking {{ message_content.get('link','')}} here
+
+2. Click ‘Edit’
+
+3. Enter the required details
+
+4. Accept our Terms and Pricing
+
+5. Click Publish
+
+You can reach us on +91-7738888577 or write to us on hello@mycuteoffice.com if you face any issues or need any clarifications.
+
+{% include "footer.html" ignore missing %}

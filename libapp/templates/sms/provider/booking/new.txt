@@ -1,0 +1,9 @@
+Dear {{ message_content.get('name' , '')|title }},
+
+We have received the payment for booking for your
+
+space : {{ message_content.get('link_space', '') }},
+
+Booking Details have been sent to your registered email.
+
+{% include "footer.html" ignore missing %}

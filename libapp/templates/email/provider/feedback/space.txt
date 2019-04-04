@@ -1,0 +1,13 @@
+
+Dear {{ email_content.get('name','')|title }},
+
+The user ID: {{ email_content.get('uid','') }} used the (conference room / cabinspace) in your space ID: {{ email_content.get('space_id','') }}.
+
+Rate the user based on the following.
+
+1. Maintaining sanctity of the space
+2. Company profile same as communicated
+3. No. of people using the space higher than specified in the booking summary
+4. Check-out on the time as per the booking.
+
+{% include "footer.html" ignore missing %}

@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ email_content.get('name','')|title }},</p>
+				<p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                    Earn Rs. 300 in MCO credits by inviting a friend to use MCO to get a space.<br />
+                    Everyone loves credits, so keep the generosity going.<br />
+                    The more credits you give, the more you get.<br />
+				</p>
+
+                <table width="100%" cellpadding="15" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        Share
+                    </td>
+                    <td>
+                        Share
+                    </td>
+                    <td>
+                        Tweet
+                    </td>
+                    <td>
+                        Email
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       <a href="{{ email_content.get('link_fb','') }}" target="_blank"> (FB)</a>
+                    </td>
+                    <td>
+                       <a href="{{ email_content.get('link_linkedin','') }}" target="_blank"> (Linkedin)</a>
+                    </td>
+                    <td>
+                        <a href="{{ email_content.get('link_twitter','') }}" target="_blank"> (Twitter)</a>
+                    </td>
+                    <td>
+                        <a href="{{ email_content.get('link_mail','') }}" target="_blank"> (Mail)</a>
+                    </td>
+                </tr>
+                </table>
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                    Your Referral code is <b>{{ email_content.get('ref_code','') }}</b>
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

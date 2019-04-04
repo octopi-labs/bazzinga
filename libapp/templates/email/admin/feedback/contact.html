@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear Admin,</p>
+				<p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+
+                    There is new help request from {{ message_content.get('name', '')|title }}. <br />
+                    Following are the contact details of the person:<br />
+                        Email: {{ message_content.get('email', '')}}<br />
+                        Phone: {{ message_content.get('phone', '')}}<br />
+                        Message: {{ message_content.get('msg', '')}}<br />
+                    For more details  <a href="{{message_content.get('link_feedback', '')}}" target="_blank" > Click Here</a>;
+
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

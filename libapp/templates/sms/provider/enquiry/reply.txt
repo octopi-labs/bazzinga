@@ -1,0 +1,16 @@
+
+Hi {{ message_content.get('name', '')|title }}
+
+{% if message_content.get('is_admin' , '') %}
+    {{ message_content.get('sender') }}  from MCO Team has viewed and replied to enquiry for ({{ message_content.get('title', '')}})
+{% else %}
+    {{ message_content.get('sender') }}  has viewed and replied to enquiry for ({{ message_content.get('title', '')}})
+{% endif %}
+
+{{ message_content.get('sender') }}’s Reply:
+
+{{ message_content.get('msg', '') }}
+
+{{message_content.get('link_reply', '')}}
+
+{% include "footer.html" ignore missing %}

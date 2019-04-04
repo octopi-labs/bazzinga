@@ -1,0 +1,6 @@
+
+Dear {{ message_content.get('name','') |title }},
+
+The booking ID:  {{ message_content.get('book_id','') }} has been accepted by the space provider.
+
+{% include "footer.html" ignore missing %}

@@ -1,0 +1,7 @@
+
+Dear {{ message_content.get('name','')|title }},
+
+The approval of the Space ID: {{ message_content.get('space_id','') }} is Pending.
+
+{% include "footer.html" ignore missing %}
+

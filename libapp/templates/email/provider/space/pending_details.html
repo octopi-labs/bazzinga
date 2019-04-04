@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <p>
+                <p>Dear  {{ message_content.get('name', '')|title }},</p>
+				<p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				    I understand that you were trying to list your space on <a href="https://mycuteoffice.com">mycuteoffice.com</a>. Can you please share the details mentioned in this email.
+                </p>
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                    I have found following things missing in your <a href="{{ message_content.get('link_space', '') }}">space</a>:
+                    {% set pending_list = message_content.get('pending_list').split(',') %}
+                    <ul>
+                    {% for item in pending_list %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                    </ul>
+                </p>
+                {% if message_content.get('admin_message', '') %}
+                    <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                        <!-- Following is the message from our team member:<br /><br/> -->
+                        "{{ message_content.get('admin_message', '')|safe }}"
+                    </p>
+                {% endif %}
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                    You can share the details or ask any quesstion by replying on this email. Looking to have your space onboard soon.
+                    <!--  or you can whatsapp me on +91-9967079232 -->
+				</p>
+
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                    <a href="{{message_content.get('link_space', '')}}" target="_blank" style="display: inline-block; background-color: #1487d4; color: white; text-decoration: none; padding: 5px 25px; border: 2px solid gray;">Edit Space</a>
+                </p>
+
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

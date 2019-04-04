@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name', '')|title }},</p>
+				<p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    The cancellation for your booking ID:&nbsp;<b> {{ message_content.get('book_id', '') }} </b> has been approved by the space provider.<br />
+                    You will receive the refund amount within 5 working days.
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

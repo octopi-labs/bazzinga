@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ email_content.get('name','')|title }},</p>
+                <p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    You’re just <b>{{ email_content.get('percent','') }}%</b> away from completing your booking.<br />
+                    <a href="{{ email_content.get('link','') }}" target="_blank">Click here</a>  to resume the booking.<br />
+                    For any queries pertaining to the space, contact us on <b>773888857</b> or mail us on hello@mycuteoffice.com
+                </p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

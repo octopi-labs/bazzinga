@@ -1,0 +1,18 @@
+
+Dear {{ message_content.get('name','') |title}},
+
+A new booking request has been generated with booking ID:  {{ message_content.get('book_id','') }}
+
+Booking request details,
+
+Name:  {{ message_content.get('name','') }}
+Contact:  {{ message_content.get('contact','') }}
+Email Address:  {{ message_content.get('email','') }}
+User Industry:  {{ message_content.get('user_industry','') }}
+Space ID: {{ message_content.get('space_id','') }}
+From Date:  {{ message_content.get('from_content','') }}
+To Date:  {{ message_content.get('to_date','') }}
+From Time:   {{ message_content.get('from_time','') }}
+To Time:  {{ message_content.get('to_time','') }}
+
+{% include "footer.html" ignore missing %}

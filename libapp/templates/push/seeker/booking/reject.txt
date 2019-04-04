@@ -1,0 +1,1 @@
+Status of Booking ID: {{ message_content.get('book_id','') }} is Rejected

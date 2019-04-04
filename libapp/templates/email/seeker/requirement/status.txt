@@ -1,0 +1,12 @@
+Dear {{ message_content.get('name','')|title }},
+
+The status for  your Requirement in {{ message_content.get('address','')}} ,({{ message_content.get('req_id','') }})
+is changed to {{ message_content.get('status','')}}
+
+ {% if message_content.get('admin_msg' , '') != '' %}
+    due to following reason : ' {{ message_content.get('admin_msg','')}}'
+ {% endif %}
+    Meanwhile if you are still looking for office space to work from, please click button below.<br />
+ {{message_content.get('link_reply', '')}} I Need Space
+
+{% include "footer.html" ignore missing %}

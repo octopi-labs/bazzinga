@@ -1,0 +1,6 @@
+Dear {{ message_content.get('name', '')|title }},
+
+We have suggested few spaces as per your requirement.
+Please check your email for more details
+
+{% include "footer.html" ignore missing %}

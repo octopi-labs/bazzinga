@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ email_content.get('name', '')|title }},</p>
+				<p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                    The below spaces that match your requirement have been added recently.
+				</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" style="border: 2px solid #F0F0F0" bgcolor="#F8F8F8" cellpadding="15" cellspacing="0" border="0">
+                    <tr>
+                        <td valign="top">
+                            <a href="https://www.mycuteoffice.com" target="_blank"  style="text-decoration: none;">
+                                <img width="225px" height="150px" src="https://mycuteoffice.com/sites/default/files/styles/space_image/public/spaces/trainingroom/38/budget-training-centre-near-dadar-railway-station-trainingroom_0.jpg?itok=mAyJ6fXw">
+                                <p style="background-color: #474747; color: white; padding: 5px; margin: 0; text-align: center; line-height: 1.5; opacity: 0.4">
+                                    <span>Dadar West, Dadar</span><br />
+                                    <span style="color: white;">Rs. 2,499 / Hour / Training Room</span>
+                                </p>
+                            </a>
+                        </td>
+                        <td valign="top">
+                            <a href="https://www.mycuteoffice.com" target="_blank" style="text-decoration: none;">
+                                <img width="225px" height="150px" src="https://mycuteoffice.com/sites/default/files/styles/space_image/public/spaces/trainingroom/38/budget-training-centre-near-dadar-railway-station-trainingroom_0.jpg?itok=mAyJ6fXw">
+                                <p style="background-color: #474747; color: white; padding: 5px; margin: 0; text-align: center; line-height: 1.5; opacity: 0.4">
+                                    <span>Dadar West, Dadar</span><br />
+                                    <span style="color: white;">Rs. 2,499 / Hour / Training Room</span>
+                                </p>
+                            </a>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td valign="top">
+                            <a href="https://www.mycuteoffice.com" target="_blank" style="text-decoration: none;">
+                                <img width="225px" height="150px" src="https://mycuteoffice.com/sites/default/files/styles/space_image/public/spaces/trainingroom/38/budget-training-centre-near-dadar-railway-station-trainingroom_0.jpg?itok=mAyJ6fXw">
+                                <p style="background-color: #474747; color: white; padding: 5px; margin: 0; text-align: center; line-height: 1.5; opacity: 0.4">
+                                    <span>Dadar West, Dadar</span><br />
+                                    <span style="color: white;">Rs. 2,499 / Hour / Training Room</span>
+                                </p>
+                            </a>
+                        </td>
+                        <td valign="top">
+                            <a href="https://www.mycuteoffice.com" target="_blank" style="text-decoration: none;">
+                                <img width="225px" height="150px" src="https://mycuteoffice.com/sites/default/files/styles/space_image/public/spaces/trainingroom/38/budget-training-centre-near-dadar-railway-station-trainingroom_0.jpg?itok=mAyJ6fXw">
+                                <p style="background-color: #474747; color: white; padding: 5px; margin: 0; text-align: center; line-height: 1.5; opacity: 0.4">
+                                    <span>Dadar West, Dadar</span><br />
+                                    <span style="color: white;">Rs. 2,499 / Hour / Training Room</span>
+                                </p>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

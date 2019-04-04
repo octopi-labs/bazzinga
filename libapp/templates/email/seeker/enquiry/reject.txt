@@ -1,0 +1,8 @@
+
+Dear {{ message_content.get('name', '')|title }},
+
+We regret to inform you that your enquiry for the Space : {{ message_content.get('space_title', '') }} has been rejected.
+However, below are the spaces that match your criteria.
+
+
+{% include "footer.html" ignore missing %}

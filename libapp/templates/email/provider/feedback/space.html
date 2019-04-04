@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ email_content.get('name','')|title }},</p>
+				<p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                   The user ID:&nbsp;<b> {{ email_content.get('uid','') }}</b>&nbsp; used the (conference room / cabinspace) in your space ID:<b> {{ email_content.get('space_id','') }} </b>.
+				</p>
+                <p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                 <b>Rate the user based on the following.</b><br /><br />
+                    1. Maintaining sanctity of the space<br />
+                    2. Company profile same as communicated<br />
+                    3. No. of people using the space higher than specified in the booking summary<br />
+                    4. Check-out on the time as per the booking.
+                </p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

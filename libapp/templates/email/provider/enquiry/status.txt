@@ -1,0 +1,5 @@
+Hi {{ message_content.get('name', '')|title }},
+
+Status of your enquiry has been changed to {{ message_content.get('status', '')}}
+
+{% include "footer.html" ignore missing %}

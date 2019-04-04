@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{message_content.get('name', '') }}|title,</p>
+				<p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                    Your booking for Booking ID:&nbsp;<br>{{message_content.get('book_id', '') }} < /br>
+                     for the Space :<a href="{{message_content.get('link_space', '')}}" target="_blank" > {{ message_content.get('space_title','') }}</a>
+                    is due
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

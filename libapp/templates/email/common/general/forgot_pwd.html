@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name','')|title }},</p>
+				<p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                 We received a request to reset your password on MyCuteOffice.com, you can confirm it by  <a href="{{ message_content.get('link','') }}" target="_blank"><b>clicking here</b></a>. If you didn’t request to reset the password, you can disregard this email.
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

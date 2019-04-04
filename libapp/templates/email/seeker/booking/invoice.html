@@ -1,0 +1,129 @@
+{% extends 'layout.html' %}
+{% block content %}
+<table width="100%" style="height: 100%;" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td>
+            <table cellpadding="10" cellspacing="0" style="border: 1px solid #DDDDDD;" width="100%">
+                <tr>
+                    <td width="50%" valign="top">
+                        <img src="{{message_content.get('img_src', '')}}" width="100%">
+                    </td>
+                    <td width="50%" valign="top">
+                        <p>
+                            <a href="{{message_content.get('link_space', '')}}" target="_blank" >#MCO{{ message_content.get('workspace_id','') }} - {{ message_content.get('space_title','') }}</a>
+                        </p>
+                        <p><b>{{message_content.get('workspace_type', '')}}</b> at {{message_content.get('locality', '')}}</p>
+                        <p><b>Working Days:</b> {{message_content.get('working_days', '')}}</p>
+                        <p><b>Timings: </b>{{message_content.get('timings', '')}}</p>
+                        <p><b>Booking Type: </b>{{message_content.get('booking_type_label', '')}}</p>
+                        <p><b>Duration: </b>{{message_content.get('book_duration', '')}}</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table cellpadding="10" cellspacing="0" style="border-left: 1px solid #DDDDDD;border-right: 1px solid #DDDDDD;" width="100%">
+                <tr>
+                    <td width="50%" valign="top">
+                        <h2>BOOKING DETAILS</h2>
+                        <p><b>Booking ID: </b>{{message_content.get('book_id', '')}}</p>
+                        <p><b>Transaction ID: </b>{{message_content.get('order_id', '')}}</p>
+                        <p><b>Date: </b>{{message_content.get('date', '')}}</p>
+                        <p><b>Status: </b>{{message_content.get('booking_status', '')}}</p>
+                    </td>
+                    <td width="50%" valign="top">
+                        <h2>PAYMENT</h2>
+                        <table width="100%" border="0">
+                            <tr>
+                                <td>
+                                    <p style="margin-top:0;">Cost:</p>
+                                </td>
+                                <td align="right">
+                                    <p style="margin-top:0;">Rs. {{message_content.get('cost', '')}}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <p style="margin-top:0;">({{message_content.get('duration', '')}}{{message_content.get('booking_type', '')}}
+                                        x Rs.{{message_content.get('unit_price', '')}}/{{message_content.get('booking_type', '')}} x {{message_content.get('quantity', '')}}{{message_content.get('workspace_type', '')}})</p>
+                                </td>
+                            </tr>
+                            {% if message_content.get('discount') %}
+                            <tr>
+                                <td>
+                                    <p style="margin-top:0;">Discount:</p>
+                                </td>
+                                <td align="right">
+                                    <p style="margin-top:0;">Rs. {{ message_content.get('discount') }}</p>
+                                </td>
+                            </tr>
+                            {% endif %}
+                            {% if message_content.get('service_charge') %}
+                            <tr>
+                                <td>
+                                    <p style="margin-top:0;">Service Charge:</p>
+                                </td>
+                                <td align="right">
+                                    <p style="margin-top:0;">Rs. {{ message_content.get('service_charge') }}</p>
+                                </td>
+                            </tr>
+                            {% endif %}
+                            {% if message_content.get('service_tax') %}
+                            <tr>
+                                <td>
+                                    <p style="margin-top:0;">Service Tax:</p>
+                                </td>
+                                <td align="right">
+                                    <p style="margin-top:0;">Rs. {{ message_content.get('service_tax') }}</p>
+                                </td>
+                            </tr>
+                            {% endif %}
+                            {% if message_content.get('deposit') %}
+                            <tr>
+                                <td>
+                                    <p style="margin-top:0;">Deposit:</p>
+                                </td>
+                                <td align="right">
+                                    <p style="margin-top:0;">Rs. {{ message_content.get('deposit') }}</p>
+                                </td>
+                            </tr>
+                            {% endif %}
+                            <tr>
+                                <td>
+                                    <p style="margin-top:0;"><b>Total:</b></p>
+                                </td>
+                                <td align="right">
+                                    <p style="margin-top:0;"><b>Rs. {{ message_content.get('total') }}</b></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table cellpadding="10" cellspacing="0" style="border: 1px solid #DDDDDD;" width="100%">
+                <tr>
+                    <td width="50%" valign="top">
+                        <h2>PAYABLE TO</h2>
+                        <p>My Cute Office Pvt. Ltd.</p>
+                        <p>F 31, Profit Centre,</p>
+                        <p>Mahavir Nagar,</p>
+                        <p>Kandivali West, Mumbai - 400067</p>
+                    </td>
+                    <td width="50%" valign="top">
+                        <h2>CLIENT</h2>
+                        <p>{{message_content.get('seeker_name', '')}}</p>
+                        <p>{{message_content.get('seeker_email', '')}}</p>
+                        <p>{{message_content.get('seeker_mobile', '')}}</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+{% endblock content %}

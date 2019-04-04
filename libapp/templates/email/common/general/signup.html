@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name','')|title }},</p>
+				<p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                 Thanks for signing up on My Cute Office. Please take a minute and confirm your MCO account.
+				</p>
+                <a href="{{ message_content.get('link','') }}" target="_blank" style="display: inline-block; border: 2px solid gray; background-color: #000; padding: 10px; color: #fff; margin-left: 165px; text_decoration: none;"><b> Confirm account</b></a>
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                If you haven’t signed up with MCO, you can disregard this message.
+				</p>
+
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

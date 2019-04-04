@@ -1,0 +1,13 @@
+
+Hi {{ message_content.get('name', '')|title }}
+
+{% if message_content.get('is_admin' , '') %}
+    {{ message_content.get('sender', '') }} has replied to your enquiry:
+{% else %}
+    {{ message_content.get('sender', '') }} has replied to your enquiry:
+{% endif %}
+
+{{ message_content.get('msg', '')|safe }}
+{{message_content.get('link_reply', '')}}
+
+{% include "footer.html" ignore missing %}

@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ email_content.get('name','')|title }},</p>
+                <p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    Haven’t found a space matching your requirement?<br />
+                    New spaces matching your requirement have been added.<br />
+                    <b>Check them out below.</b>
+                </p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

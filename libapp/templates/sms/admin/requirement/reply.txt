@@ -1,0 +1,8 @@
+Hi {{ message_content.get('name', '')|title }}
+
+My Cute Office Representative has viewed and replied to your requirement
+My Cute Office representatives  Reply: {{ message_content.get('msg', '')|safe }}
+
+{{message_content.get('link_reply', '')}}
+
+{% include "footer.html" ignore missing %}

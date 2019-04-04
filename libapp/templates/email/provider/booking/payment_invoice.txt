@@ -1,0 +1,18 @@
+
+Dear {{ message_content.get('name' , '')|title }},
+
+We have received the payment for booking for your space in ({{ message_content.get('location', '') }})
+
+Booking Details:
+
+Capacity: {{ message_content.get('capacity' , '') }}
+
+Address: {{ message_content.get('address' , '') }}
+
+Date: {{ message_content.get('from_date' , '') }} to {{ message_content.get('to_date' , '') }}
+
+Timings: {{ message_content.get('from_time' , '') }} to {{ message_content.get('to_time' , '') }}
+
+Amount Paid : {{ message_content.get('amount' , '') }}
+
+{% include "footer.html" ignore missing %}

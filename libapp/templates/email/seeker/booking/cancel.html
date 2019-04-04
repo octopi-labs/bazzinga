@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name', '')|title }},</p>
+				<p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    We have received booking cancellation request from you for Space &nbsp;<a href="{{message_content.get('link_space', '')}}" target="_blank">{{ message_content.get('space_title', '') }} </a>&nbsp;&nbsp; with booking details as follows:<br />
+
+                    Booking Id: {{ message_content.get('book_id', '') }}<br />
+                    Transaction Id: {{ message_content.get('order_id', '') }}<br />
+                    Booking date: {{ message_content.get('book_date', '') }}<br />
+
+                    Our representative will verify and then cancel booking or get back to you for confirmation.
+
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ name['name'] }},</p>
+				<p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                 Your booking (Booking ID:&nbsp;<b> {{ space_seeker['book_id'] }} </b> ) is Incomplete.
+                 Click below to complete your booking.
+				</p>
+                <a href="{{['link_spaceseeker'] }}" target="_blank" style="display: inline-block; border: 2px solid gray; background-color: #000; padding: 10px; color: #fff;">Complete Your Booking!</a>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

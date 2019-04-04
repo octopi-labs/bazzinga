@@ -1,0 +1,6 @@
+Dear {{ message_content.get('name', '')|title }},
+
+We have received your requirement for location : "{{ message_content.get('location', '') }} " on My Cute Office with the following message.
+{{ message_content.get('msg', '')|replace('<br />', '') }}
+
+{% include "footer.html" ignore missing %}

@@ -1,0 +1,8 @@
+
+Dear {{ message_content.get('name' , '')|title }},
+Followup Date for Requirement
+
+Requirement ID:  {{ message_content.get('req_id' , '') }}
+Name:  {{ message_content.get('user_name' , '') }}
+
+{% include "footer.html" ignore missing %}

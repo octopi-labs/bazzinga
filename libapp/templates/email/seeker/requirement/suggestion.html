@@ -1,0 +1,88 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name', '')|title }},</p>
+				<p style="font-size: 15px; font-family: Verdana;">
+                    Its awesome to see your  showing in one of our 1000+ verified co-working space.<br/>
+                </p>
+                <p style="font-size: 15px; font-family: Verdana;">
+                We have shortlisted the following spaces matching your requirement.<br/>
+                </p>
+                <p style="font-size: 15px; font-family: Verdana;">
+                    (Use the "Visit this Space" button if you want us to fix up a visit to the space.
+                     We will send you the required details as soon as we receive your request)
+                </p>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" cellpadding="0" cellspacing="10" border="0">
+                    {% for workspace in message_content.get('workspaces') %}
+                    {% if loop.index%2 == 1 %}
+                    <tr>
+                    {% endif %}
+                        <td valign="top">
+                            <a href="{{workspace['link_space']}}" target="_blank"  style="text-decoration: none;">
+                                <img width="235px" height="150px" src=" {{ workspace['image_src']}}">
+                                <p style="background-color: #FFFFFF; color: #333333; border: 1px solid #DDDDDD; padding: 5px; margin: 0; text-align: center; line-height: 1.5; font-size: 12px;">
+                                    {% set capacity = 'people' %}
+                                    {% if workspace['capacity'] == 1 %}
+                                        {% set capacity = 'person' %}
+                                    {% endif %}
+                                    <span style="color: #2EB16F;">Rs. <span style="font-size: 14px;"><b>{{ workspace['display_cost'] }}</b></span> {{ workspace['display_label'] }}</span><br>
+                                    <span><b>{{ workspace['capacity'] }} {{ capacity }} {{ workspace['type'] }}</b></span><br>
+                                    <span style="color: #337ab7">{{ workspace['locality']|truncate(38) }}</span><br/>
+                                     <a href="{{workspace['link_space_visit']}}" target="_blank" style="display: inline-block; background-color: #337ab7; color: white; text-decoration: none; padding: 5px 25px; border: 2px solid gray;">Visit the space</a>
+
+                                </p>
+                            </a>
+                        </td>
+                    {% if loop.index%2 == 0 %}
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+
+                </table>
+            </td>
+        </tr>
+        {% if message_content.get('marketable') %}
+        <tr>
+            <td>
+               <p style="font-size: 15px; font-family: Verdana;">
+                   You may also like to visit the following spaces specially designed for you.<br/>
+                </p>
+                <table width="100%" cellpadding="0" cellspacing="10" border="0">
+                    {% for workspace in message_content.get('marketable') %}
+                    {% if loop.index%2 == 1 %}
+                    <tr>
+                    {% endif %}
+                        <td valign="top">
+                            <a href="{{workspace['link_space']}}" target="_blank"  style="text-decoration: none;">
+                                <img width="235px" height="150px" src=" {{ workspace['image_src']}}">
+                                <p style="background-color: #FFFFFF; color: #333333; border: 1px solid #DDDDDD; padding: 5px; margin: 0; text-align: center; line-height: 1.5; font-size: 12px;">
+                                    {% set capacity = 'people' %}
+                                    {% if workspace['capacity'] == 1 %}
+                                        {% set capacity = 'person' %}
+                                    {% endif %}
+                                    <span style="color: #2EB16F;">Rs. <span style="font-size: 14px;"><b>{{ workspace['display_cost'] }}</b></span> {{ workspace['display_label'] }}</span><br>
+                                    <span><b>{{ workspace['capacity'] }} {{ capacity }} {{ workspace['type'] }}</b></span><br>
+                                    <span style="color: #337ab7">{{ workspace['locality']|truncate(38) }}</span><br/>
+                                     <a href="{{workspace['link_space_visit']}}" target="_blank" style="display: inline-block; background-color: #337ab7; color: white; text-decoration: none; padding: 5px 25px; border: 2px solid gray;">Visit the space</a>
+
+                                </p>
+                            </a>
+                        </td>
+                    {% if loop.index%2 == 0 %}
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+
+                </table>
+            </td>
+        </tr>
+        {% endif %}
+  </table>
+{% endblock content %}

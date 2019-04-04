@@ -1,0 +1,16 @@
+Dear {{ message_content.get('name','')|title }},
+
+    Following Requirements are assigned to you.
+        Requirement ID
+        Name
+        Landmark
+        Created
+        Action
+    {% set requirement_list = message_content.get('requirements', NONE) %}
+    {% for requirement in requirement_list %}
+                    #REQ{{ requirement.get('id') }}
+            {{ requirement.get('fullname', '') | title }}
+            {{ requirement.get('landmark', '') }}
+            {{ requirement.get('created', '') }}
+            #REQ{{ message_content.get('req_id','') }}
+    {% endfor %}

@@ -1,0 +1,1 @@
+Cancellation for the Booking ID:{{ message_content.get('book_id','') }} is Disapproved

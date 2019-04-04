@@ -1,0 +1,5 @@
+Dear {{ message_content.get('name', '')|title }},
+
+You have approved cancellation request of booking ID: {{ message_content.get('book_id', '') }}.
+
+{% include "footer.html" ignore missing %}

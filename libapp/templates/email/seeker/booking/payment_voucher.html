@@ -1,0 +1,108 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+        <tr>
+            <td>
+                <table width="100%">
+                    <tr>
+                        <td width="50%" valign="top">
+                            <h2>My Cute Office Pvt Ltd</h2>
+                            F-31, Profit Centre,<br>
+                            Mahavir Nagar, Kandivali (W),<br>
+                            Mumbai - 400067<br>
+                            Tel: +91-9819-64-1134<br>
+                        </td>
+                        <td width="50%" valign="top">
+                            <h2>PAYMENT VOUCHER</h2>
+                            <b>VOUCHER NO. {{ message_content.get('voucher_no', '') }}</b><br>
+                            <b>DATE: {{ message_content.get('date', '') }}</b>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>User Details</b><br>
+                {{ message_content.get('name', '') }} from {{ message_content.get('company_name', '') }}<br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Space Provider:</b><br>
+                {{ message_content.get('address1', '') }}, <br>
+                {{ message_content.get('city', '') }}, <br>
+                {{ message_content.get('pincode', '') }}<br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Nature of Service: </b>{{ message_content.get('workspace_type', '') }}<br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Start Date: {{ message_content.get('start_date', '') }}<br>
+                End Date  : {{ message_content.get('end_date', '') }}<br>
+                Date of Payment: {{ message_content.get('date', '') }}</b><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" border="1" cellspacing="0">
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount Paid (in INR)</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Advance Rent
+                        </td>
+                        <td align="right">
+                            {{ message_content.get('advance', '') }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Refundable Deposit
+                        </td>
+                        <td align="right">
+                            {{ message_content.get('deposit', '') }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Documentation & Service Charges
+                        </td>
+                        <td align="right">
+                            {{ message_content.get('doc_and_service', '') }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Total Amount Received
+                        </td>
+                        <td align="right">
+                            {{ message_content.get('total_amount', '') }}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Amount in Rupees:</b> {{ message_content.get('amount_in_words', '')|title }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Received with thanks from {{ message_content.get('name', '') }} ({{ message_content.get('company_name', '') }}) the above mentioned amount.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>For My Cute Office Pvt. Ltd.</b>
+            </td>
+        </tr>
+    </table>
+{% endblock content %}

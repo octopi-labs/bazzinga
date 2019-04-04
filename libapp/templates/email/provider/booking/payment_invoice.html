@@ -1,0 +1,102 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+        <tr>
+            <td>
+                <table width="100%">
+                    <tr>
+                        <td width="50%">
+                            <h2>My Cute Office Pvt Ltd</h2>
+                            F-31, Profit Centre,<br>
+                            Mahavir Nagar, Kandivali (W),<br>
+                            Mumbai - 400067<br>
+                            Tel: +91-9819-64-1134<br>
+                        </td>
+                        <td valign="top" align="right" width="50%">
+                            <h1>INVOICE</h1>
+                            INVOICE : {{ message_content.get('invoice_no', '') }}<br>
+                            DATE: {{ message_content.get('date', '') }}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Bill To:</b><br>
+                {{ message_content.get('owner', '') }},<br>
+                {{ message_content.get('space_address', '')|safe }},<br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table border="1" cellspacing="0" cellpadding="10" width="100%">
+                    <tr>
+                        <th>Description</th>
+                        <th>Brokerage per {{ message_content.get('offer_type', '') }} per seat</th>
+                        <th>No. of Seats</th>
+                        <th>No. of {{ message_content.get('offer_type', '') }}s</th>
+                        <th>AMOUNT (Rs.)</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Client Name – {{ message_content.get('name', '') }} ({{ message_content.get('company_name', '') }})<br>
+                            Brokerage: {{ message_content.get('brok_percent', '') }} <br>
+                            Transaction Value – Rs.{{ message_content.get('unit_rate', 0) }} per {{ message_content.get('offer_type', '') }}<br>
+                            Billed for – {{ message_content.get('billed_for', '') }}<br>
+                        </td>
+                        <td>
+                            {{ message_content.get('brok_amount', '') }}
+                        </td>
+                        <td>
+                            {{ message_content.get('quantity', '') }}
+                        </td>
+                        <td>
+                            {{ message_content.get('duration', '') }}
+                        </td>
+                        <td align="right">
+                            {{ message_content.get('total_brok', '') }}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="4" align="right">
+                            <b>Total</b>
+                        </td>
+                        <td align="right">
+                            {{ message_content.get('total', '') }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            Rs. {{ message_content.get('total_in_words', '')|title }}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Details for Account Transfer:</b><br>
+                A/c No.: 3511544988<br>
+                IFSC Code: KKBK0001359<br>
+                Bank Name: Kotak Bank Ltd<br>
+                Branch: Mahavir Nagar, Kandivali (W)<br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Terms and Conditions:</b>
+                <ol>
+                    <li>You are required to clear the payment within 5 days of receiving this invoice.</li>
+                    <li>Delay in payment will attract compounding interest amounting to 2% per month on the amount due.</li>
+                    <li>Payment must be through an A/C Payee cheque drawn in favour of “My Cute Office Pvt Ltd” or through account
+                        transfer to the account mentioned above.</li>
+                    <li>
+                        Any refund for the fees will be considered based on the terms and conditions mentioned on the website MyCuteOffice.com
+                    </li>
+                </ol>
+            </td>
+        </tr>
+    </table>
+{% endblock content %}

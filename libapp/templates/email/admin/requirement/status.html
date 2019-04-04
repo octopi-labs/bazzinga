@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name','')|title }},</p>
+                <p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    The status for Requirement in {{ message_content.get('address','')}} ,
+                    (
+                    <a href="{{ message_content.get('link_reply', '') }}">
+                        #REQ{{ message_content.get('req_id','') }}
+                    </a>)
+                    is changed to <b>{{ message_content.get('status','') | title }}</b>
+				</p>
+                {% if message_content.get('link_reply', '') != '' %}
+                    <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                        To check the details of requirement click button below.<br />
+                        <a href="{{message_content.get('link_reply', '')}}" target="_blank" style="display: inline-block; background-color: black; color: white; text-decoration: none; padding: 5px 25px; border: 2px solid gray;">#REQ{{ message_content.get('req_id','') }}</a>
+                    </p>
+                {% endif %}
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

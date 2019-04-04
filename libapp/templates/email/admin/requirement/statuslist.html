@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name','')|title }},</p>
+                <p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    The status for following Requirements is changed to {{ message_content.get('status','') | title }}
+                    </b>
+				</p>
+                <table width="100%" style="height: 100%;", cellpadding="2" cellspacing="0", border="1">
+                    <tr>
+                        <th>Requirement ID</th>
+                        <th>Name</th>
+                        <th>Landmark</th>
+                        <th>Created</th>
+                        <th>Updated</th>
+                    </tr>
+                    {% set requirement_list = message_content.get('requirements', NONE) %}
+                    {% for requirement in requirement_list %}
+                        <tr>
+                            <td>
+                                <a href="{{ message_content.get('link_reply', '') | replace('req_id', requirement.get('id')) }}" target="_blank">
+                                    #REQ{{ requirement.get('id') }}
+                                </a>
+                            </td>
+                            <td>{{ requirement.get('fullname', '') | title }}</td>
+                            <td>{{ requirement.get('landmark', '') }}</td>
+                            <td>{{ requirement.get('created', '') }}</td>
+                            <td>{{ requirement.get('changed', '') }}</td>
+                        </tr>
+                    {% endfor %}
+                    <tr></tr>
+                </table>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

@@ -1,0 +1,6 @@
+
+Dear {{ message_content.get('name','') |title }},
+
+The Enquiry for Space: {{ message_content.get('space_title','') }}  has Accepted the
+
+{% include "footer.html" ignore missing %}

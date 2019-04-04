@@ -1,0 +1,13 @@
+
+Dear {{ message_content.get('name' , '')|title }},
+
+A new enquiry has been created as follows:
+
+Space ID:  {{ message_content.get('space_id' , '') }}
+Name:  {{ message_content.get('name' , '') }}
+Mobile:  {{ message_content.get('mobile' , '') }}
+Message:  {{ message_content.get('msg' , '')|safe }}
+Contact Person: {{ message_content.get('contact_person' , '') }}
+Phone:  {{ message_content.get('contact_phone' , '') }}
+
+{% include "footer.html" ignore missing %}

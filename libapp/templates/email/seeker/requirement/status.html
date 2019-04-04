@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <br>
+                <p>Dear {{ message_content.get('name','')|title }},</p>
+                <p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    The status for  your Requirement in '{{ message_content.get('address','')}}', (#REQ{{ message_content.get('req_id','') }})
+                    is changed to <b> {{ message_content.get('status','') | title }} </b> <br/>
+
+                    {% if message_content.get('admin_msg' , '') != '' %}
+                        due to following reason: <b>'{{ message_content.get('admin_msg','')}}'</b>
+                    {% endif %}
+				</p>
+                {% if message_content.get('link_reply', '') != '' %}
+                    <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                        Meanwhile if you are still looking for office space to work from, please click button below.<br />
+                        <a href="{{message_content.get('link_reply', '')}}" target="_blank" style="display: inline-block; background-color: black; color: white; text-decoration: none; padding: 5px 25px; border: 2px solid gray;">I Need Space</a>
+                    </p>
+                {% endif %}
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

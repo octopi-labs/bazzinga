@@ -1,0 +1,91 @@
+{% extends 'layout.html' %}
+{% block content_block%}
+<table width="100%" style="height: 100%;" cellpadding="10" cellspacing="0" border="0">
+    <tr>
+
+                        <!-- ============ LEFT COLUMN (MENU) ============== -->
+        <td width="35%" valign="top" bgcolor="#C0C0C0">
+            <p style="box-sizing: border-box; padding: 15px; font-size: 15px; line-height: 2;">
+                            <b>PAYABLE TO </b><br>
+                            F 31, <br>
+                            Profit Centre,<br>
+                            Mahavir Nagar,<br>
+                            Kandivali West, Mumbai - 400067
+                            </p>
+            <p  style="box-sizing: border-box; padding: 15px; font-size: 15px; line-height: 2;">
+                <b>CLIENT</b><br>
+                Name : {{ message_content.get('seeker_name' , '') }}<br>
+                Email : {{ message_content.get('seeker_email' , '') }}<br>
+                Mobile : {{ message_content.get('seeker_mobille' , '') }}<br>
+            </p>
+        </td>
+
+                        <!-- ============ RIGHT COLUMN (CONTENT) ============== -->
+        <td width="65%" valign="top" bgcolor="#C4C3D0">
+            <table width="100%" style="height: 100%;" cellpadding="10" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <p style="box-sizing: border-box; font-size: 15px; line-height: 2;">
+                            <b>OVERVIEW</b><br>
+                            Space : {{ message_content.get('space_title' , '') }}<br>
+                            Booking type : {{ message_content.get('booking_type' , '') }}<br>
+                            Duration : {{ message_content.get('duration' , '') }}<br>
+                        </p>
+                    </td>
+                </tr>
+                <!--<tr>-->
+                    <!--<td>-->
+                        <!--<table style="width:100%">-->
+                            <!--<tr>-->
+                                <!--<th align="left">SERVICES</th>-->
+                            <!--</tr>-->
+                            <!--<tr style="font-size: 15px;">-->
+                                <!--<td>project cost</td>-->
+                                <!--<td align="right">$0,000.00</td>-->
+                            <!--</tr>-->
+                            <!--<tr style="font-size: 15px;">-->
+                                <!--<td>add ons ( xhrs @ $00 / hr )</td>-->
+                                <!--<td align="right">$0,000.00</td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                    <!--<td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>-->
+                        <!--<table style="width:100%">-->
+                            <!--<tr>-->
+                                <!--<th align="left">REIMBURSEMENTS</th>-->
+                            <!--</tr>-->
+                            <!--<tr style="font-size: 15px;">-->
+                                <!--<td>add on one</td>-->
+                                <!--<td align="right">$0,000.00</td>-->
+                            <!--</tr>-->
+                            <!--<tr style="font-size: 15px;">-->
+                                <!--<td>something else</td>-->
+                                <!--<td align="right">$0,000.00</td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                    <!--<td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <td>
+                        <table style="width:100%">
+                            <tr>
+                                <th align="left">PAID</th>
+                            </tr>
+                            <tr> style="font-size: 15px;">
+                                <td>payment mode :</td>
+                                <td align="right">{{ message_content.get('payment_mode' , '') }}</td>
+                            </tr>
+                            <tr style="font-size: 15px;">
+                                <td>payment method :</td>
+                                <td align="right">{{ message_content.get('payment_method' , '') }}</td>
+                            </tr>
+                        </table>
+                    <td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+{% endblock content_block%}

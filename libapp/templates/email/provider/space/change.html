@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Hi {{ message_content.get('name', '') }},</p>
+                
+                <p>The status of your space has been changed from Published to {{ message_content.get('space_status', '')}}
+                    because of following reason :
+                </p>
+
+                <p>"{{ message_content.get('admin_message', '')|safe }}" </p>
+
+                <p>If you wish to publish the space again in the future,.</p>
+
+                <p>
+                    <ol>
+                         <li>Review your listing by clicking <a href="{{ message_content.get('link_space','')}}" target="_blank">here</a></li>
+                         <li>Click ‘Edit’</li>
+                         <li>Enter the required details</li>
+                         <li>Accept our Terms and Pricing</li>
+                         <li>Click Publish.</li>
+                    </ol>
+                </p>
+
+                <p>
+                    You can reach us on +91-7738888577 or write to us on hello@mycuteoffice.com if you face any issues or need any clarifications
+                </p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

@@ -1,0 +1,7 @@
+Thanks a lot for using My Cute Office.
+
+Your Booking ID is {{ message_content.get('book_id','') }}.
+
+You will receive the address as soon as your booking is confirmed.
+
+{% include "footer.html" ignore missing %}

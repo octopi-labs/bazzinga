@@ -1,0 +1,6 @@
+Hi {{ message_content.get('name', '')|title }},
+
+Thank you for contacting us.
+Our representative will get back to you in next 24 hours to know more about your needs.
+
+{% include "footer.html" ignore missing %}

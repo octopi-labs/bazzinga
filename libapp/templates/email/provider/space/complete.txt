@@ -1,0 +1,16 @@
+Dear {{ message_content.get('name', '')|title }},
+
+Thank you for listing your space with us! Your Space ID is: {{ message_content.get('space_id', '') }}
+Your listing in now 100% complete.
+
+Acceptance of terms & conditions:
+
+For your space to be published to the thousands of space seekers who visit us daily, please go through and accept our terms & conditions by following the steps below.
+
+Step 1: Review your page listing by clicking this link.
+
+Step 2: Scroll to the end of the page after reviewing your listing.
+
+Step 3: Click on ‘I Accept’ at the end of the page after going through our Terms & Conditions.
+
+{% include "footer.html" ignore missing %}

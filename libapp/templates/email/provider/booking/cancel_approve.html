@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name' , '')|title }},</p>
+				<p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    The booking ID: <b>{{message_content.get('book_id' , '') }}</b> for your space ID: <b>{{ message_content.get('space_id' , '') }}</b> has been cancelled.<br />
+                    The amount, as per the cancellation policy of MyCuteOffice.com, will be remitted within 5 working days.
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

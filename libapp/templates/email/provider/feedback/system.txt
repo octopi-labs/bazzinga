@@ -1,0 +1,14 @@
+
+Dear {{ email_content.get('name','')|title }},
+
+Thanks you for using MyCuteOffice.com.
+
+Review your experience based on the following.
+
+1. Search process for the space
+2. Essential details about the user made available by MyCuteOffice
+3. Communication with the space provider
+4. Payment system
+
+{% include "footer.html" ignore missing %}
+

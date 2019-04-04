@@ -1,0 +1,1 @@
+{{ message_content.get('name', '') }} has booked your space.

@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name' , '')|title }},</p>
+				<p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    <b>A new enquiry has been created as follows:</b><br />
+                    Space ID:&nbsp;&nbsp; {{ message_content.get('space_id' , '') }}<br />
+                    Name:&nbsp;&nbsp; {{ message_content.get('enquirer_name' , '') }}<br />
+                    Mobile:&nbsp;&nbsp; {{ message_content.get('mobile' , '') }}<br />
+                    Message:&nbsp;&nbsp; {{ message_content.get('msg' , '')|safe }}<br />
+                    Contact Person:&nbsp;&nbsp; {{ message_content.get('contact_person' , '') }}<br />
+                    Phone:&nbsp;&nbsp; {{ message_content.get('contact_mobile' , '') }}<br />
+                </p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

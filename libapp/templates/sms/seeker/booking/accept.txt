@@ -1,0 +1,15 @@
+Congratulations! {{ message_content.get('name','')}}
+
+Your Booking No. {{ message_content.get('book_id','') }} for {{ message_content.get('date','') }} has been confirmed.
+
+Space : {{message_content.get('link_space', '')}}
+
+Owner Name : {{ message_content.get('Owner_name', '') }},
+
+Contact : {{ message_content.get('Owner_contact', '')}},
+
+The address is: {{ message_content.get('address','') }}.
+
+In case you have any issues in locating the space you can call our helpline {{ message_content.get('contact_no','') }}
+
+{% include "footer.html" ignore missing %}

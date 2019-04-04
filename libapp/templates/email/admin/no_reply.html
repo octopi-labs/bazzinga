@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Hi {{ template_data.get('name', '')|title }},</p>
+				<p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+				    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+				    when an unknown printer took a galley of type and scrambled it to make a type
+				    specimen book. It has survived not only five centuries, but also the leap into
+				    electronic typesetting, remaining essentially unchanged.
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

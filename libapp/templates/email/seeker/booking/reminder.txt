@@ -1,0 +1,8 @@
+
+Dear {{ message_content.get('name', '')|title }},
+
+Your booking (Booking ID: {{message_content.get('book_id', '') }}
+for the Space :<a href="{{message_content.get('link_space', '')}}" target="_blank" > {{ message_content.get('space_title','') }}</a>
+is due on &nbsp;<b>{{ message_content.get('due_date', '') }}
+
+{% include "footer.html" ignore missing %}

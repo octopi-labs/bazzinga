@@ -1,0 +1,16 @@
+
+Dear {{ email_content.get('name','')|title }},
+
+Earn Rs. 300 in MCO credits by inviting a friend to use MCO to get a space.
+
+Everyone loves credits, so keep the generosity going.
+
+The more credits you give, the more you get.
+
+Share	Share	    Tweet	    Email
+
+(FB)	(Linkedin)	(Twitter)	(Mail)
+
+Your Referral code is {{ email_content.get('ref_code','') }}
+
+{% include "footer.html" ignore missing %}

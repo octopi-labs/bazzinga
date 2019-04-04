@@ -1,0 +1,1 @@
+{{ message_content.get('ss_name', '') }} is interested in your space

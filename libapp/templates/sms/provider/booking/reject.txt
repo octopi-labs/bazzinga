@@ -1,0 +1,5 @@
+Dear {{ message_content.get('name','') |title }},
+
+You have rejected booking for the booking ID:  {{ message_content.get('book_id','') }}.
+
+{% include "footer.html" ignore missing %}

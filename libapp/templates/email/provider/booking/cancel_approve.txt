@@ -1,0 +1,8 @@
+
+Dear {{ message_content.get('name' , '')|title }},
+
+The booking ID: {{ message_content.get('book_id' , '') }} for your space ID: {{ message_content.get('space_id' , '') }} has been cancelled.
+
+The amount, as per the cancellation policy of MyCuteOffice.com, will be remitted within 5 working days.
+
+{% include "footer.html" ignore missing %}

@@ -1,0 +1,1 @@
+Booking reminder Booking ID: {{ message_content.get('book_id','') }}

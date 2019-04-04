@@ -1,0 +1,9 @@
+Dear Admin,
+
+There is new help request from {{ message_content.get('name', '')|title }}.
+Following are the contact details of the person :
+    Email: {{ message_content.get('email', '')}}
+    Phone: {{ message_content.get('phone', '')}}
+For more details Click here {{message_content.get('link_feedback', '')}}
+
+{% include "footer.html" ignore missing %}

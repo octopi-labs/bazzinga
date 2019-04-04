@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name','')|title }},</p>
+				<p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+
+                    Thank you for being with us and providing your office Space :&nbsp; <a href="{{message_content.get('link_space', '')}}" target="_blank" > {{ message_content.get('space_title','') }}</a>&nbsp; <br/>
+                    On your continued support for us we would like to know whether your space is still available for renting out to the people.<br/>
+                    So please select appropriate option as follows:<br/>
+
+                    <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                        <a href="{{message_content.get('link_reply_agree', '')}}" target="_blank" style="display: inline-block; background-color: #1487d4; color: white; text-decoration: none; padding: 5px 25px; border: 2px solid gray;">Yes</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="{{message_content.get('link_reply_disagree', '')}}" target="_blank" style="display: inline-block; background-color: no-color; color: black; text-decoration: none; padding: 5px 25px; border: 2px solid gray;">No</a>
+                    </p>
+                </p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Hi {{ message_content.get('name', '')|title }},</p>
+				<p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				    <b>{{ message_content.get('ss_name', '') }}</b> (Booking ID: {{ message_content.get('book_id', '') }}) has cancelled the booking in your space due on <b>{{ message_content.get('due_date', '') }}</b><br /><br />
+                    Booking Details:<br />
+                    Capacity: {{ message_content.get('capacity' , '') }}<br />
+                    Address: {{ message_content.get('address' , '') }}<br />
+                    Date: {{ message_content.get('from_date' , '') }} to {{ message_content.get('to_date' , '') }} <br />
+                    Timings: {{ message_content.get('from_time' , '') }} to {{ message_content.get('to_time' , '') }}<br />
+                    Ameneties: {{message_content.get('ameneties' , '') }}
+                </p>
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                    You can reach us on +91-7738888577 or write to us on hello@mycuteoffice.com if you face any issues or need any clarifications.
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

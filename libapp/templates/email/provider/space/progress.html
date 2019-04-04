@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ email_content.get('name', '')|title }},</p>
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				    Thank you for listing your space with us!<br />You are just 3 steps away from earning rent from your space.
+				</p>
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				    Just follow these steps to make your space available to thousands of space seekers:
+                    <ol>
+                    <li>Edit your listing by clicking <a href="{{ email_content.get('link_edit_listing', '') }}" target="_blank" style="text-decoration: none;">here</a></li>
+                    <li>Enter the required details including the images</li>
+                    <li>Accept our <a href="{{ email_content.get('link_term', '') }}" target="_blank" style="text-decoration: none;">term</a> and <a href="{{ email_content.get('link_pricing', '') }}" target="_blank" style="text-decoration: none;">pricing</a></li></li>
+                   </ol>
+				</p>
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				    Once your listing is complete, our team will review and publish your space after verifying the details.
+				</p>
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				    You can reach us on +91-7738888577 or write to us on hello@mycuteoffice.com if you face any issues or need any clarifications.
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

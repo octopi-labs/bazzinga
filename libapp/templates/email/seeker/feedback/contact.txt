@@ -1,0 +1,8 @@
+Hi {{ message_content.get('name', '')|title }},
+
+Thank you for contacting us.
+Our representative will get back to you in next 24 hours to know more about your needs.
+Meanwhile you can search through our list of available spaces as per your need from {{message_content.get('link_search', '')}} Here
+
+
+{% include "footer.html" ignore missing %}

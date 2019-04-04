@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{email_content.get('name', '')|title }},</p>
+				<p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                   Thanks you for using MyCuteOffice.com.
+				</p>
+                <p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                 <b><u>Review  your experience based on the following.</u></b><br /><br />
+                    <ol>
+                        <li>Search process for the space</li>
+                        <li>Availability of the appropriate space</li>
+                        <li> Communication with the space provider</li>
+                        <li>Payment system</li>
+                    </ol>
+                </p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

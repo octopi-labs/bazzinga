@@ -1,0 +1,5 @@
+Dear {{ message_content.get('name', '')|title }},
+
+We regret to inform you that your enquiry for the Space : {{ message_content.get('link_space', '') }} has been rejected.
+
+{% include "footer.html" ignore missing %}

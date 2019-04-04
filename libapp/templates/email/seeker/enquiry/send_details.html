@@ -1,0 +1,18 @@
+
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('seeker_name' , '')|title }},</p>
+				<p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    Contact Details of the Space Manager and Space for your enquiry are as follows : <br />
+                    Name :&nbsp;&nbsp; {{ message_content.get('Owner_name' , '') }}<br />
+                    Contact :&nbsp;&nbsp; {{ message_content.get('Owner_contact' , '') }}<br />
+                    Space:&nbsp; <a href="{{message_content.get('link_space', '')}}" target="_blank" > {{ message_content.get('space_title','') }}</a>&nbsp;<br />
+                    Address:&nbsp;&nbsp; {{ message_content.get('space_address' , '') }}<br />
+                </p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

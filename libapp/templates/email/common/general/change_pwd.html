@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name','')|title }},</p>
+				<p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                 You recently changed your password for your MCO account {{ message_content.get('user_name', '') }}.
+                    If you did not change the password and believe your MCO account has been compromised, please contact MCO support on
+                    <a href="mailto:{{ message_content.get('contact_email', '')}}" target="_blank"><b>{{ message_content.get('contact_email', '') }}</b></a>
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

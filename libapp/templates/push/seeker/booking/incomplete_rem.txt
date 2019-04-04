@@ -1,0 +1,7 @@
+Dear {{ message_content.get('name', '')|title }},
+
+We saw you were interested in booking the space but could not go ahead.
+
+You can revisit ({{ message_content.get('space_id', '') }}) by clicking here
+
+{% include "footer.html" ignore missing %}

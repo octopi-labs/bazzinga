@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ email_content.get('name', '')|title }},</p>
+				<p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				    I'm Neelay Jain, Co-founder of My Cute Office. We, at My Cute Office, believe that new businesses should save time and money involved in getting an office and rather invest that in growing their business. We do this by helping companies share spare office spaces with each other.
+                    These can be booked quickly on short-term basis.
+				</p>
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				   Over the last 7 months, we received requests for over 6000 desks and facilities while listing 2400 such spaces on our portal. <br />
+                    Our community is growing daily to include Professionals, Startups, SMEs and Freelancers.
+				</p>
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				   Benefits of MyCuteOffice.com <br />
+                    <ul style="line-height: 2; fon-size: 15px; font-family: Verdana;">
+                        <li>Safe & Secure transactions through MyCuteOffice.com</li>
+                        <li>Payment management by MyCuteOffice.com</li>
+                        <li>A technology driven platform to market your space</li>
+                        <li>Faster fill rate</li>
+                    </ul>
+                    To list your space on MyCuteOffice.com, please fill the form below.
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

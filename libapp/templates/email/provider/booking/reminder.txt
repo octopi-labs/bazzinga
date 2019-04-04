@@ -1,0 +1,12 @@
+
+Dear {{ message_content.get('name' , '')|title }},
+
+This is just a gentle reminder for {{ message_content.get('ss_name' , '')|title }} booking on {{ message_content.get('date' , '')|title }}. Please be available during the check-in, verify identity of the visitor and ensure that all the facilities and amenities as mentioned in the booking summary are made available.
+
+Kindly find attached the booking summary for your reference.
+
+In case of any cancellation, we will inform you atleast 24 hours prior to the check-in date.
+
+You can reach us on +91-7738888577 or write to us on hello@mycuteoffice.com if you face any issues or need any clarifications.
+
+{% include "footer.html" ignore missing %}

@@ -1,0 +1,9 @@
+Dear {{ message_content.get('seeker_name', '')|title }},
+
+Contact Details of the Space Manager and Space for your enquiry are as follows :
+Name : {{ message_content.get('Owner_name', '') }},
+Contact : {{ message_content.get('Owner_contact', '')}},
+Space : {{ message_content.get('space_title', '')|title }},
+Address : {{ message_content.get('space_address', '')|title }}
+
+{% include "footer.html" ignore missing %}

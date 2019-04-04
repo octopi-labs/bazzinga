@@ -1,0 +1,14 @@
+*.iml
+*.pyc
+*.log
+.DS_Store
+.vscode
+.sonarlint
+
+.idea/
+.vscode/
+venv/
+logs/
+celerybeat-schedule
+
+libapp/config/

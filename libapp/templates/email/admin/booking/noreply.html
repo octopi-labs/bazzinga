@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name','') |title }},</p>
+				<br style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    The booking confirmation for booking ID:&nbsp;<b>{{ message_content.get('book_id','') }}</b>&nbsp;for the space:<a href="{{message_content.get('link_space', '')}}" target="_blank" > {{ message_content.get('space_title','') }}</a> ,</br>
+                    Workspace ID : &nbsp;<b>{{ message_content.get('workspace_id','') }}</b>&nbsp;is overdue.<br />
+                    Kindly contact the space provider.
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

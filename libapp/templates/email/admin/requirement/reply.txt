@@ -1,0 +1,7 @@
+Hi {{ message_content.get('name', '')|title }}
+
+{{ message_content.get('ss_name') }}’s Reply: <br />
+{{ message_content.get('msg', '')|safe }}
+{{message_content.get('link_reply', '')}}
+
+{% include "footer.html" ignore missing %}

@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name','')|title }},</p>
+                <p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    Following Requirements are assigned to you.
+                    </b>
+				</p>
+                <table width="100%" style="height: 100%;", cellpadding="2" cellspacing="0", border="1">
+                    <tr>
+                        <th>Requirement ID</th>
+                        <th>Name</th>
+                        <th>Landmark</th>
+                        <th>Created</th>
+                        <th>Action</th>
+                    </tr>
+                    {% set requirement_list = message_content.get('requirements', NONE) %}
+                    {% set link_reply = message_content.get('link_reply', '') %}
+                    {% for requirement in requirement_list %}
+                        {% set link = link_reply | replace('req_id', requirement.get('id')) %}
+                        <tr>
+                            <td>
+                                <a href="{{ link_reply }}" target="_blank">
+                                    #REQ{{ requirement.get('id') }}
+                                </a>
+                            </td>
+                            <td>{{ requirement.get('fullname', '') | title }}</td>
+                            <td>{{ requirement.get('landmark', '') }}</td>
+                            <td>{{ requirement.get('created', '') }}</td>
+                            <td><a href="{{ link }}" target="_blank" style="display: inline-block; background-color: black; color: white; text-decoration: none; padding: 5px 25px; border: 2px solid gray;">#REQ{{ message_content.get('req_id','') }}</a></td>
+                        </tr>
+                    {% endfor %}
+                    <tr></tr>
+                </table>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

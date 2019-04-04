@@ -1,0 +1,15 @@
+Dear {{ message_content.get('name','')|title }},
+    The status for following Requirements is changed to {{ message_content.get('status','') | title }}
+        Requirement ID
+        Name
+        Landmark
+        Created
+        Updated
+    {% set requirement_list = message_content.get('requirements', NONE) %}
+    {% for requirement in requirement_list %}
+            #REQ{{ requirement.get('id') }}
+            {{ requirement.get('name', '') | title }}
+            {{ requirement.get('landmark', '') }}
+            {{ requirement.get('created', '') }}
+            {{ requirement.get('changed', '') }}
+    {% endfor %}

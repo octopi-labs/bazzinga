@@ -1,0 +1,21 @@
+
+Hi {{ message_content.get('name', '')|title }},
+
+{{ message_content.get('ss_name', '') }} (Booking ID: {{ message_content.get('book_id', '') }}) has cancelled the booking in your space due on {{ message_content.get('due_date', '') }}
+
+Booking Details:
+
+Capacity: {{ message_content.get('capacity' , '') }}
+
+Address: {{ message_content.get('address' , '') }}
+
+Date: {{ message_content.get('from_date' , '') }} to {{ message_content.get('to_date' , '') }}
+
+Timings: {{ message_content.get('from_time' , '') }} to {{ message_content.get('to_time' , '') }}
+
+Ameneties: {{message_content.get('ameneties' , '') }}
+
+You can reach us on +91-7738888577 or write to us on hello@mycuteoffice.com if you face any issues or need any clarifications.
+
+
+{% include "footer.html" ignore missing %}

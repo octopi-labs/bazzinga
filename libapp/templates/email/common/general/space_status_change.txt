@@ -1,0 +1,10 @@
+
+Dear {{ email_content.get('name','')|title }},
+
+The status of your space with the Space ID: {{ email_content.get('space_id','') }} has been changed from Published to Filled / Deleted / Revoked
+
+If you wish to publish the space again in the future, click on the link below,
+
+--> Go to Change status -->Select Request to Publish
+
+{% include "footer.html" ignore missing %}

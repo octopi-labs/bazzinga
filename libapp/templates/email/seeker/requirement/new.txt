@@ -1,0 +1,10 @@
+Dear {{ message_content.get('name', '')|title }},
+
+We have received your requirement on My Cute Office for a location "{{ message_content.get('location', '')}}" with the following message.
+
+{{ message_content.get('msg', '')|safe }}
+
+You can reach us on +91-7738888577 or write to us on hello@mycuteoffice.comif you face any issues or need any clarifications.
+
+
+{% include "footer.html" ignore missing %}

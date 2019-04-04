@@ -1,0 +1,8 @@
+Dear {{ message_content.get('name', '')|title }},
+
+Status of your space has been changed to {{ message_content.get('status', '')}}
+because of following reason :
+
+{{ message_content.get('admin_message', '')|safe }}
+
+{% include "footer.html" ignore missing %}

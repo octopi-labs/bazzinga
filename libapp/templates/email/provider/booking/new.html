@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name' , '')|title }},</p>
+
+				<p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				    We have received the payment for booking for your Space :&nbsp; <a href="{{message_content.get('link_space', '')}}" target="_blank" > {{ message_content.get('space_title','') }}</a>&nbsp;<br /><br />
+                    Booking Details: <br />
+                    Capacity: {{ message_content.get('capacity' , '') }}<br />
+                    Address: {{ message_content.get('address' , '') }}<br />
+                    Date: {{ message_content.get('from_date' , '') }} to {{ message_content.get('to_date' , '') }} <br />
+                    Timings: {{ message_content.get('from_time' , '') }} to {{ message_content.get('to_time' , '') }}<br />
+                    Amount Paid : {{ message_content.get('amount' , '') }} <br />
+                </p>
+
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                        Please confirm the booking by clicking <a href="{{ message_content.get('link_booking_confirm' , '') }}" target="_blank">here</a>. We will process the payment within 7 working days of the check-in date.
+                </p>
+
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

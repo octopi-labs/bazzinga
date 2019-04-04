@@ -1,0 +1,8 @@
+
+Dear {{ message_content.get('name','')|title }},
+
+The Space ID: {{ message_content.get('space_id','') }} has not reverted to the enquiry ID: {{ message_content.get('enq_id','') }}  for over 48 hours.
+
+Kindly follow up.
+
+{% include "footer.html" ignore missing %}

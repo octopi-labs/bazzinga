@@ -1,0 +1,10 @@
+
+Dear {{ message_content.get('name', '')|title }},
+
+Congratulations! Your enquiry for the Space : {{ message_content.get('space_title', '') }} has been accepted.
+
+ Name ; {{ message_content.get('Owner_name' , '') }}
+ Contact : {{ message_content.get('Owner_contact' , '') }}
+ Address: {{ message_content.get('space_address' , '') }}
+
+{% include "footer.html" ignore missing %}

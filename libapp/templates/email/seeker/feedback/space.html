@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{email_content.get('name', '')|title }},</p>
+				<p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    You booked and used the (conference room / cabin space) in space ID:&nbsp<b> {{email_content.get('space_id', '') }} </b>.
+				</p>
+                <p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                <b><u>Please select a rating based on the following.</u></b><br /><br />
+                    <ol>
+                        <li> The quality of space</li>
+                        <li>The facilities available as per the requirement</li>
+                        <li> The location of the space</li>
+                        <li>Check-in process in the space</li>
+                    </ol>
+                </p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

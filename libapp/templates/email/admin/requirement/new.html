@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name' , '') |title}},</p>
+				<p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                  We have received requirement for work space at <a href="" target="_blank"><b>{{ message_content.get('landmark' , '')|title }}</b></a> landmark.
+				</p>
+                <p>
+                    Name: &nbsp;&nbsp;{{ message_content.get('user_name' , '') |title }}<br /><br />
+                    Email: &nbsp;&nbsp;{{ message_content.get('email' , '') }}<br /><br />
+                    Mobile: &nbsp;&nbsp;{{ message_content.get('mobile' , '') }}<br /><br />
+                </p>
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                    <a href="{{message_content.get('link_reply', '')}}" target="_blank" style="display: inline-block; background-color: black; color: white; text-decoration: none; padding: 5px 25px; border: 2px solid gray;">Reply</a>
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

@@ -1,0 +1,9 @@
+
+Dear {{ message_content.get('name','')|title }},
+
+The Space ID: {{ message_content.get('space_id','') }} has been revoked.
+
+Reason for Revoking:
+{{ message_content.get('msg','')|safe }}
+
+{% include "footer.html" ignore missing %}

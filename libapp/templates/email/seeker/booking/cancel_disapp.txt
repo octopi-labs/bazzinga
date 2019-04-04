@@ -1,0 +1,8 @@
+
+Dear {{ message_content.get('name', '')|title }},
+
+The cancellation for your booking ID:  {{ message_content.get('book_id', '') }} has been disapproved by the space provider.
+
+You will receive the refund amount within 5 working days.
+
+{% include "footer.html" ignore missing %}

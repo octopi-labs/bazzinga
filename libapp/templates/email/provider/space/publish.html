@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Hi {{ message_content.get('name', '')|title }},</p>
+
+                <p>We have great news for you!</p>
+
+                <p>Your space is now live and visible to thousands of space seekers.</p>
+
+                <p>
+                    To view your listing you can click <a href="{{ message_content.get('link_space', '') }}">here.</a>
+                </p>
+
+                    You can view and reply to the enquiries as well as see current bookings from your dashboard by clicking <a href="{{ message_content.get('link_dashboard', '') }}">here</a>.
+                </p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

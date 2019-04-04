@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name','') |title }},</p>
+				<p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                     A new booking request has been generated with booking ID:&nbsp;<b>{{ message_content.get('book_id','') }}</b>
+				</p>
+                <p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    Booking request details
+                    Name:&nbsp;&nbsp; {{ message_content.get('name','') }}<br />
+                    Contact:&nbsp;&nbsp; {{ message_content.get('contact','') }}<br />
+                    Email Address:&nbsp;&nbsp; {{ message_content.get('email','') }}<br />
+                    User Industry:&nbsp;&nbsp; {{ message_content.get('user_industry','') }}<br />
+                    Space ID:&nbsp;&nbsp; {{ message_content.get('space_id','') }}<br />
+                    From Date:&nbsp;&nbsp; {{ message_content.get('from_date','') }}<br />
+                    To Date:&nbsp;&nbsp; {{ message_content.get('to_date','') }}<br />
+                    From Time: &nbsp;&nbsp; {{ message_content.get('from_time','') }}<br />
+                    To Time:&nbsp;&nbsp; {{ message_content.get('to_time','') }}<br />
+                </p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

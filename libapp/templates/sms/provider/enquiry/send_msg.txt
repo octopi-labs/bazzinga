@@ -1,0 +1,6 @@
+Dear {{ message_content.get('name' , '')|title }},
+
+ {{ message_content.get('admin_name' , '') }} from MCO has sent you a private message as folllows:
+
+ "{{ message_content.get('message' , '')|safe }}"
+{% include "footer.html" ignore missing %}

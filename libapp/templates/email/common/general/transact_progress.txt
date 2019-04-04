@@ -1,0 +1,10 @@
+
+Dear {{ email_content.get('name','')|title }},
+
+You’re just {{ email_content.get('percent','') }}% away from completing your booking.
+
+Click here to resume the booking.
+
+For any queries pertaining to the space, contact us on 773888857 or mail us on hello@mycuteoffice.com
+
+{% include "footer.html" ignore missing %}

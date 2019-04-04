@@ -1,0 +1,11 @@
+Hi {{ message_content.get('name', '')|title }}
+
+{% if message_content.get('is_admin' , '') %}
+        {{ message_content.get('admin', '') }} from MCO Team  has viewed and replied to your enquiry for <a href="{{message_content.get('link_reply', '')}}" target="_blank">{{ message_content.get('landmark', '')}}</a><br /><br />
+ {% else %}
+        {{ message_content.get('so_name', '') }}  has viewed and replied to your enquiry for <a href="{{message_content.get('link_reply', '')}}" target="_blank">{{ message_content.get('landmark', '')}}</a><br /><br />
+  {% endif %}
+
+{{message_content.get('link_reply', '')}}
+
+{% include "footer.html" ignore missing %}

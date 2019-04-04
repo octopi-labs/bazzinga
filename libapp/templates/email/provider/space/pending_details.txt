@@ -1,0 +1,22 @@
+Dear  {{ message_content.get('name', '')|title }},
+
+Spaces which are having all the details provided like address, landmark, amenities, etc. have higher chances of attracting more seekers.
+
+We have found following things missing in your {{ message_content.get('link_space', '') }}
+
+{% set pending_list = message_content.get('pending_list').split(',') %}
+
+{% for item in pending_list %}
+   {{ item }}
+{% endfor %}
+
+{% if message_content.get('admin_message', '') %}
+   Following is the message from our team member:
+
+   "{{ message_content.get('admin_message', '')|safe }}"
+{% endif %}
+Please provide above detail by editing space or by replying to this email.
+
+{{message_content.get('link_space', '')}}
+
+{% include "footer.html" ignore missing %}

@@ -1,0 +1,7 @@
+Dear {{ message_content.get('name','')|title }},
+
+Thank you for being with us and providing your office space {{message_content.get('link_space', '')}}.
+On your continued support for us we would like to know whether your space is still available for renting out to the people.
+So please select appropriate option as follows:
+
+<Yes Button with blue color> <No button with no color>

@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ message_content.get('name', '')|title }},</p>
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+				   You have generated enquiry for the Space in <b>(<a href="{{message_content.get('link_space', '')}}" target="_blank">{{ message_content.get('location', '') }}</a>)</b>
+				</p>
+                 <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                    Our executive will shortly get in touch and share the details of the space with you.
+				</p>
+                <p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                    Meanwhile if you wish to provide any other details please reply to the enquiry.<br />
+                    <a href="{{message_content.get('link_reply', '')}}" target="_blank" style="display: inline-block; background-color: black; color: white; text-decoration: none; padding: 5px 25px; border: 2px solid gray;">Reply</a>
+                </p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

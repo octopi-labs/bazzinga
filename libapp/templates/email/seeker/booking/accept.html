@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<br>
+            <br>
+                <p>Dear {{ message_content.get('name','')|title}},</p>
+				<p style="line-height: 25px; font-size: 15px; font-family: Verdana;">
+                    The booking ID:&nbsp;&nbsp;<b>{{ message_content.get('book_id','') }}</b>&nbsp;&nbsp;has been accepted by the space provider.</br>
+
+                    Space : <a href="{{message_content.get('link_space', '')}}" target="_blank" > {{ message_content.get('space_title','') }}</a> <br/>
+
+                    Date :{{ message_content.get('date','') }}<br/>
+
+                    Owner Name : {{ message_content.get('owner_name', '') }},<br/>
+
+                    Contact : {{ message_content.get('owner_contact', '')}},<br/>
+
+                    The address is: {{ message_content.get('address','') }}.
+
+				</p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

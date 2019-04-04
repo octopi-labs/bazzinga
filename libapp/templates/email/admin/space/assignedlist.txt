@@ -1,0 +1,16 @@
+Dear {{ message_content.get('name','')|title }},
+
+    Following Spaces are assigned to you.
+        SPace ID
+        Name
+        Landmark
+        Created
+        Action
+    {% set space_list = message_content.get('spaces', NONE) %}
+    {% for space in space_list %}
+                    #MCOSP{{ space.get('id') }}
+            {{ space.get('fullname', '') | title }}
+            {{ space.get('landmark', '') }}
+            {{ space.get('created', '') }}
+            #MCOSP{{ message_content.get('space_id','') }}
+    {% endfor %}

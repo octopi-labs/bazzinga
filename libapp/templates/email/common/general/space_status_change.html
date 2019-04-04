@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table width="100%" style="height: 100%;" cellpadding="15" cellspacing="0" border="0">
+		<tr>
+            <td>
+                <p>Dear {{ email_content.get('name','')|title }},</p>
+				<p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    The status of your space with the Space ID:&nbsp;<b>  {{ email_content.get('space_id','') }} </b>b>&nbsp;has been changed from <b>Published</b> to <b>Filled / Deleted / Revoked</b>
+                </p>
+                <p style="line-height: 1.8; font-size: 15px; font-family: Verdana;">
+                    If you wish to publish the space again in the future, click on the link below<br />
+                    <a href=" {{ email_content.get('link','') }} " target="_blank">--> Go to Change status  -->Select Request to Publish</a>
+                </p>
+            </td>
+        </tr>
+  </table>
+{% endblock content %}

@@ -1,0 +1,17 @@
+
+Hi {{ message_content.get('name', '')|title }},
+
+   {{ message_content.get('ss_name', '') }} has enquired for your office in ({{ message_content.get('location', '') }}).
+
+   {{ message_content.get('ss_name', '') }}'s message:
+
+   {{ message_content.get('ss_msg', '')|safe }}
+
+  Click here to respond to {{ message_content.get('ss_name', '') }}
+
+  We have shared your contact details and address with {{ message_content.get('ss_name', '') }}. He should call you soon.
+
+  You can reach us on +91-7738888577 or write to us on hello@mycuteoffice.com if you face any issues or need any clarifications.
+
+
+{% include "footer.html" ignore missing %}

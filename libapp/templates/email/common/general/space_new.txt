@@ -1,0 +1,8 @@
+
+Dear {{ email_content.get('name','')|title }},
+
+Haven’t found a space matching your requirement?
+New spaces matching your requirement have been added.
+Check them out below.
+
+{% include "footer.html" ignore missing %}

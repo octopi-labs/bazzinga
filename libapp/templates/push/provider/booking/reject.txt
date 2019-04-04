@@ -1,0 +1,1 @@
+You have Cancelled the booking request ID:{{ message_content.get('book_id','') }}

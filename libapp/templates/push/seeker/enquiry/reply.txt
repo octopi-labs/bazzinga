@@ -1,0 +1,1 @@
+A new reply has been posted for your Enquiry ID: {{ message_content.get('enq_id', '') }}

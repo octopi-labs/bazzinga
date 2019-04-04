@@ -1,0 +1,9 @@
+THANK YOU!
+
+{% if 'signature' in message_content %}
+{{ message_content.get('signature', '')|replace('<div>', ', <div>')|striptags }}
+{% else %}
+Abhishek Barari
+Co-Founder, My Cute Office
+{% endif %}
+Creating values from innovative workspaces

@@ -1,0 +1,5 @@
+Dear {{ message_content.get('name','')|title }},
+
+({{ message_content.get('referral_visit_url','') }})
+
+{% include "footer.html" ignore missing %}

@@ -1,0 +1,6 @@
+
+Dear {{ message_content.get('name','') |title}},
+
+The user of Booking ID:  {{ message_content.get('book_id','') }}  has requested to cancel the booking for the Space ID:  {{ message_content.get('space_id','') }}
+
+{% include "footer.html" ignore missing %}

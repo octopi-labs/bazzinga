@@ -1,0 +1,21 @@
+
+Dear {{ email_content.get('name', '')|title }},
+
+Thank you for listing your space with us!
+
+You are just 3 steps away from earning rent from your space.
+
+Just follow these steps to make your space available to thousands of space seekers:
+
+1. Edit your listing by clicking here
+
+2. Enter the required details including the images
+
+3. Accept our Terms and Pricing
+
+Once your listing is complete, our team will review and publish your space after verifying the details.
+
+You can reach us on +91-7738888577 or write to us on hello@mycuteoffice.com if you face any issues or need any clarifications.
+
+
+{% include "footer.html" ignore missing %}

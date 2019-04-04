@@ -1,0 +1,7 @@
+
+Dear {{ message_content.get('name','')|title }},
+
+Your Space {{ message_content.get('space_title','') }}  is waiting for an approval and will be put on live once our team has verified the space.
+
+{% include "footer.html" ignore missing %}
+

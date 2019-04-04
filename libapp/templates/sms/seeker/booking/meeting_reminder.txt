@@ -1,0 +1,9 @@
+Dear {{ message_content.get('name','') }},
+
+We are really excited to help you with your Booking No.{{ message_content.get('book_id','') }} for tomorrow.
+
+for the  Space :<a href="{{message_content.get('link_space', '')}}" target="_blank" > {{ message_content.get('space_title','') }}</a>
+
+Just wanted to remind you to reach 15 mins early and carry a valid government identity for getting unhindered services.
+
+{% include "footer.html" ignore missing %}

@@ -1,0 +1,7 @@
+Dear {{ message_content.get('Owner_name', '')|title }},
+
+Contact Details of the enquirer for your space are as follows :
+Name : {{ message_content.get('seeker_name', '')}},
+Contact : {{ message_content.get('seeker_contact', '') }}
+
+{% include "footer.html" ignore missing %}

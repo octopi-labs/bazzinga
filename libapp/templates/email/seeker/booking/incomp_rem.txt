@@ -1,0 +1,13 @@
+
+Dear {{ message_content.get('name', '')|title }},
+
+We saw you were interested in booking the space but could not go ahead.
+
+If you are facing any issues with your booking, you can call us on +91 7738888577
+
+
+You can revisit ({{ message_content.get('space_title', '') }})
+
+You can reach us on +91-7738888577 or write to us on hello@mycuteoffice.com if you face any issues or need any clarifications.
+
+{% include "footer.html" ignore missing %}

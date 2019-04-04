@@ -1,0 +1,1 @@
+A new reply has been posted for your Requirement for {{ message_content.get('landmark', '') }}

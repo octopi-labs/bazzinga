@@ -1,0 +1,8 @@
+Dear {{ message_content.get('name', '')|title }},
+
+We saw you were interested in booking the space but could not go ahead.
+
+You can complete your booking by clicking here
+<a href="{{message_content.get('link_revisit_space', '')}}" target="_blank" > {{ message_content.get('space_title','') }}</a>
+
+{% include "footer.html" ignore missing %}

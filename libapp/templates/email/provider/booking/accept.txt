@@ -1,0 +1,7 @@
+
+Dear {{ message_content.get('name','') |title }},
+
+You have accepted booking for Space :{{ message_content.get('space_title','') }}
+with booking ID: {{ message_content.get('book_id','') }}
+
+{% include "footer.html" ignore missing %}

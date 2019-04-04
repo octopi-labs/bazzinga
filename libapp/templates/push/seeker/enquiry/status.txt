@@ -1,0 +1,3 @@
+Status of your enquiry is changed to {{ message_content.get('status', '')}}
+
+

@@ -1,0 +1,9 @@
+
+Dear {{ message_content.get('name' , '')|title }},
+Followup Date for enquiry
+
+Enquiry ID:  {{ message_content.get('enq_id' , '') }}
+Name:  {{ message_content.get('user_name' , '') }}
+Space:  {{ message_content.get('space_title' , '') }}
+
+{% include "footer.html" ignore missing %}
