@@ -23,13 +23,17 @@
                         <tr>
                             <td>
                                 <a href="{{ link_reply }}" target="_blank">
-                                    #REQ{{ requirement.get('id') }}
+                                    #MCOREQ{{ requirement.get('id') }}
                                 </a>
                             </td>
                             <td>{{ requirement.get('fullname', '') | title }}</td>
                             <td>{{ requirement.get('landmark', '') }}</td>
                             <td>{{ requirement.get('created', '') }}</td>
-                            <td><a href="{{ link }}" target="_blank" style="display: inline-block; background-color: black; color: white; text-decoration: none; padding: 5px 25px; border: 2px solid gray;">#REQ{{ message_content.get('req_id','') }}</a></td>
+                            <td>
+                                <a href="{{ link }}" target="_blank" style="display: inline-block; background-color: black; color: white; text-decoration: none; padding: 5px 25px; border: 2px solid gray;">
+                                    #MCOREQ{{ requirement.get('id') }}
+                                </a>
+                            </td>
                         </tr>
                     {% endfor %}
                     <tr></tr>

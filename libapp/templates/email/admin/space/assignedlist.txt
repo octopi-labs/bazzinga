@@ -12,5 +12,5 @@ Dear {{ message_content.get('name','')|title }},
             {{ space.get('fullname', '') | title }}
             {{ space.get('landmark', '') }}
             {{ space.get('created', '') }}
-            #MCOSP{{ message_content.get('space_id','') }}
+            View Space #MCOSP{{ space.get('id') }}
     {% endfor %}
