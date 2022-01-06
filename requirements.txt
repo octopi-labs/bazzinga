@@ -4,7 +4,7 @@ anyjson==0.3.3
 astroid==1.6.5
 backports.functools-lru-cache==1.5
 billiard==3.5.0.5
-celery==4.2.1
+celery==5.2.2
 certifi==2018.11.29
 chardet==3.0.4
 Click==7.0
